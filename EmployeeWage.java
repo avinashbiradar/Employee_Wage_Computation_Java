@@ -10,27 +10,24 @@ public class EmployeeWage {
 		int IS_FULL_TIME=2;
 		int ratePerHour=20;
 		int empHour=0;
-		
 		Random generaterandom = new Random();
 		int randomNumber = generaterandom.nextInt(3);
 		System.out.println("Random number generated :" + randomNumber);
-		
-		if (randomNumber == IS_PART_TIME)
-		{
-			 empHour=4;	
+		switch(randomNumber) {
+		case 1:
+				System.out.println("employee is full-time");
+		 		empHour=8;
+		 		int salary = ( empHour * ratePerHour);
+				System.out.println("salary is :"+salary);
+				break;
+		case 2:
+				System.out.println("employee is part-time");
+		        empHour=4;
+		        int salary1 = ( empHour * ratePerHour);
+		        System.out.println("salary is :"+salary1);
+		        break;
+		default :System.out.println("employee is absent");
 		}
-		else if(randomNumber == IS_FULL_TIME)
-		{
-			 empHour=8;
-		}
-		else
-		{
-			 empHour=0;
-		}
-		System.out.println("employee hours is:"+empHour);
-		int salary=( empHour * ratePerHour);
-		System.out.println("employee salary is:"+salary);
-	
 	}
 }
 
