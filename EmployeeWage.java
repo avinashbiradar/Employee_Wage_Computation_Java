@@ -6,18 +6,24 @@ public class EmployeeWage {
 	public static void main(String[] args) {
 		
 		System.out.println("Welcome to Employee Wage Computation ");
-
+		
 		Random generaterandom = new Random();
 		int randomNumber = generaterandom.nextInt(2);
 		System.out.println("Random number generated :" + randomNumber);
-
+		
 		if (randomNumber == 1)
 		{
 			System.out.println("Employee is present");
+			int empHour=8;
+			int ratePerHour=20;
+			int salary=( empHour * ratePerHour);
+			System.out.println("salary is :"+salary);	
 		}
-		else
+		else 
 		{
 			System.out.println("Employee is absent");
+			System.out.println("salary is : 0 ");
+			
 		}
 	}
 
