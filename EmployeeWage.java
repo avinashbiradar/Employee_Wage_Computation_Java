@@ -6,25 +6,32 @@ public class EmployeeWage {
 	public static void main(String[] args) {
 		
 		System.out.println("Welcome to Employee Wage Computation ");
+		int IS_PART_TIME=1;
+		int IS_FULL_TIME=2;
+		int ratePerHour=20;
+		int empHour=0;
 		
 		Random generaterandom = new Random();
-		int randomNumber = generaterandom.nextInt(2);
+		int randomNumber = generaterandom.nextInt(3);
 		System.out.println("Random number generated :" + randomNumber);
 		
-		if (randomNumber == 1)
+		if (randomNumber == IS_PART_TIME)
 		{
-			System.out.println("Employee is present");
-			int empHour=8;
-			int ratePerHour=20;
-			int salary=( empHour * ratePerHour);
-			System.out.println("salary is :"+salary);	
+			 empHour=4;	
 		}
-		else 
+		else if(randomNumber == IS_FULL_TIME)
 		{
-			System.out.println("Employee is absent");
-			System.out.println("salary is : 0 ");
-			
+			 empHour=8;
 		}
+		else
+		{
+			 empHour=0;
+		}
+		System.out.println("employee hours is:"+empHour);
+		int salary=( empHour * ratePerHour);
+		System.out.println("employee salary is:"+salary);
+	
 	}
-
 }
+
+
