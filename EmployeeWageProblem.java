@@ -1,17 +1,13 @@
 import java.util.Random;
 
-public class EmployeeWage {
+public class EmployeeWageProblem {
 
-
-	public static void main(String[] args) {
-		
-		System.out.println("Welcome to Employee Wage Computation ");
 		
 		/*
-		 * uc5 This code is to check part-time and full-time employee's daily wage using
-		 * switch case for a month
+		 * the Code to write a Class Method to Compute Employee Wage
 		 */
-		
+		public void empWage() 
+		{
 		int ratePerHour = 20;
 		int empHour = 0;
 		int NUM_WORKING_DAYS = 20;
@@ -43,11 +39,14 @@ public class EmployeeWage {
 				break;
 			default:
 				System.out.println("employee is absent");
-				return;
+			}
 			}
 		}
-
-	}
+public static void main(String[] args) 
+{
+	System.out.println("Welcome to Employee Wage Computation Program");
+	EmployeeWageProblem e = new EmployeeWageProblem();
+	e.empWage();
 }
 
-
+}
