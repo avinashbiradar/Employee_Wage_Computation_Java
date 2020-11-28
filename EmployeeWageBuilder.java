@@ -2,7 +2,12 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
-
+public interface IComputeWageOfEmployee {
+	interface IComputeEmpWage {
+		public void addCompanyEmpWage(String company,int empRatePerHour,int numOfWorkingDays,int maximumHoursPerMonth);
+		public void computeEmpWage();
+	}
+}
 public class EmployeeWageBuilder implements IComputeWageOfEmployee{
 	public static final int absent=1;
 	public static final int isFullTime=1;
